@@ -4,3 +4,79 @@ section {
   margin-top: -60px;
   padding-top: 60px;
 }
+a:hover {
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  /*画像を70%の不透明度に
+  もし50%にしたいときは
+  上から50、0.5、0.5にします*/
+}
+table{
+  border-collapse:separate;
+  border-spacing: 3px;
+  width: 100%;
+}
+
+table th,table td{
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+table th{
+  background-color: #52c2d0;
+  color: white;
+  border:solid 1px #52c2d0;
+  text-align: center;
+}
+
+table td{
+  border:solid 1px#d3d3d3;
+}
+.timeline {
+  list-style: none;
+}
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+/* for Desktop */
+@media ( min-width : 640px ){
+  .timeline > li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+    padding-bottom: 50px;
+  }
+  .timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #52c2d0;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+  }
+}
+h2 {
+  color: #6594e0;/*文字色*/
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #6594e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+h3 {
+  color:#20b2aa
+}
